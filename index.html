@@ -2,67 +2,59 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Triangle de Pythagore</title>
+  <title>Fiche Formules Physique-Chimie</title>
+
+  <!-- Charger MathJax + mhchem -->
+  <script>
+    MathJax = {
+      tex: {
+        packages: ['base', 'mhchem']
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Style simple -->
   <style>
-    .triangle {
-      position: relative;
-      width: 200px;
-      height: 0;
-      border-bottom: 150px solid #3498db; /* côté a */
-      border-left: 200px solid transparent; /* côté b */
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
     }
-
-    .hypotenuse {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-top: 150px solid transparent;
-      border-right: 200px solid #2ecc71; /* hypoténuse c */
-      transform: rotate(180deg);
+    h1, h2 {
+      color: #2c3e50;
     }
-
-    .label-a, .label-b, .label-c {
-      position: absolute;
-      font-weight: bold;
-      background: white;
-      padding: 2px 4px;
-    }
-
-    .label-a {
-      bottom: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .label-b {
-      left: -25px;
-      top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-    }
-
-    .label-c {
-      top: 20px;
-      left: 120px;
-      transform: rotate(-45deg);
+    p {
+      margin-bottom: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <h1>Triangle de Pythagore (CSS)</h1>
-  <div class="triangle">
-    <div class="hypotenuse"></div>
-    <div class="label-a">a</div>
-    <div class="label-b">b</div>
-    <div class="label-c">c</div>
-  </div>
 
-  <p>
-    D’après le théorème de Pythagore :  
-    $$ c^2 = a^2 + b^2 $$
-  </p>
+  <h1>Fiche : Formules de Physique-Chimie</h1>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <h2>1. Cinématique</h2>
+  <p>$$ v = \frac{d}{t} $$</p>
+
+  <h2>2. Deuxième loi de Newton</h2>
+  <p>$$ F = m \cdot a $$</p>
+
+  <h2>3. Énergie cinétique</h2>
+  <p>$$ E_c = \frac{1}{2} m v^2 $$</p>
+
+  <h2>4. Loi des gaz parfaits</h2>
+  <p>$$ PV = nRT $$</p>
+
+  <h2>5. Concentration molaire</h2>
+  <p>$$ C = \frac{n}{V} $$</p>
+
+  <h2>6. Équation chimique (ex. combustion)</h2>
+  <p>$$ \ce{CH4 + 2O2 -> CO2 + 2H2O} $$</p>
+
+  <h2>7. Réaction acido-basique</h2>
+  <p>$$ \ce{HCl + NaOH -> NaCl + H2O} $$</p>
+
 </body>
 </html>
