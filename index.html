@@ -1,27 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Théorème de Pythagore</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <meta charset="UTF-8" />
+  <title>Triangle de Pythagore</title>
+  <style>
+    .triangle {
+      position: relative;
+      width: 200px;
+      height: 0;
+      border-bottom: 150px solid #3498db; /* côté a */
+      border-left: 200px solid transparent; /* côté b */
+    }
+
+    .hypotenuse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 150px solid transparent;
+      border-right: 200px solid #2ecc71; /* hypoténuse c */
+      transform: rotate(180deg);
+    }
+
+    .label-a, .label-b, .label-c {
+      position: absolute;
+      font-weight: bold;
+      background: white;
+      padding: 2px 4px;
+    }
+
+    .label-a {
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .label-b {
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    .label-c {
+      top: 20px;
+      left: 120px;
+      transform: rotate(-45deg);
+    }
+  </style>
 </head>
 <body>
-  <h1>Théorème de Pythagore</h1>
-
-  <p>Voici le triangle :</p>
-
-  <p>
-    $$\begin{tikzpicture}
-    \draw[thick] (0,0) -- (4,0) node[midway, below] {a};
-    \draw[thick] (0,0) -- (0,3) node[midway, left] {b};
-    \draw[thick] (0,3) -- (4,0) node[midway, right] {c};
-    \end{tikzpicture}$$
-  </p>
+  <h1>Triangle de Pythagore (CSS)</h1>
+  <div class="triangle">
+    <div class="hypotenuse"></div>
+    <div class="label-a">a</div>
+    <div class="label-b">b</div>
+    <div class="label-c">c</div>
+  </div>
 
   <p>
-    Le théorème s’écrit :
-    $$c^2 = a^2 + b^2$$
+    D’après le théorème de Pythagore :  
+    $$ c^2 = a^2 + b^2 $$
   </p>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
