@@ -17,11 +17,8 @@ c² = 3² + 4² = 9 + 16 = 25
 ## 4. Schéma (via Mermaid)
 
 ```mermaid
-graph TD
-  A["A (0, 0)"]
-  B["B (3, 0)"]
-  C["C (0, 4)"]
-  A --> B
-  A --> C
-  B --> C
-  click A "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Pythagore" "Point A"
+graph LR
+  A["A (angle droit)"] --> B["B (4, 0)"]
+  A --> C["C (0, 3)"]
+  C --> B
+  style A stroke-width:2px,stroke:#000,fill:#fff
